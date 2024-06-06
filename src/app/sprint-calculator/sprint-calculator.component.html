@@ -1,0 +1,17 @@
+<form [formGroup]="sprintform" (ngSubmit)="onSubmit()" class="form">
+  <h3>Sprint calculator</h3>
+  <mat-form-field class="field">
+    <mat-label>Sprint points</mat-label>
+    <input matInput formControlName="sprintpoint" id="sprintpoint" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" >
+    Auto select stories
+  </button>
+</form>
+
+<div class="button-group">
+  <button mat-raised-button color="primary" type="submit">Clear Stories</button>
+  <br />
+  <button mat-raised-button color="primary" type="submit">Clear Sprints</button>
+</div>

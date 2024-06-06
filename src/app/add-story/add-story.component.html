@@ -1,0 +1,12 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form">
+  <h3>Add Story Form</h3>
+  <mat-form-field class="field">
+    <mat-label>Story Name</mat-label>
+    <input matInput formControlName="storyname" id="first-name" />
+  </mat-form-field>
+  <mat-form-field class="field">
+    <mat-label>Story point</mat-label>
+    <input matInput formControlName="storypoint" id="storypoint" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

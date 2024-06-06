@@ -1,0 +1,29 @@
+<!-- <div *ngIf="stories">
+    <h2>Stories</h2>
+    <ul>
+      <li *ngFor="let story of stories">
+        <strong>Story Name:</strong> {{ story.storyName }}, <strong>Story Point:</strong> {{ story.storyPoint }}
+      </li>
+    </ul>
+  </div>
+   -->
+   <div class="container">
+    <div class="cards">
+      <mat-card class="example-card" *ngFor="let story of stories">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ story.storyName }}</mat-card-title>
+            <mat-card-subtitle>Story Point: {{ story.storyPoint }}</mat-card-subtitle>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{ story.longText }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+  <button mat-raised-button color="primary" type="submit" routerLink="/add-story">
+    Add Story
+  </button>
+  

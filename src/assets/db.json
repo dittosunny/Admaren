@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "storyName": "First Story",
+      "storyPoint": 5
+    },
+    {
+      "id": 2,
+      "storyName": "Second Story",
+      "storyPoint": 8
+    },
+    {
+      "id": 3,
+      "storyName": "Third Story",
+      "storyPoint": 3
+    }
+  ]
+  
