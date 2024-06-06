@@ -12,6 +12,7 @@ import { ServiceService } from '../service.service';
 })
 export class SprintCalculatorComponent {
   stories!: any[];
+  id!:number
 
   constructor(private formBuilder: FormBuilder , private dataService: ServiceService) {}
 
@@ -44,6 +45,23 @@ export class SprintCalculatorComponent {
      
     }
   }
+
+  clearStory(storyPointToDelete: number) {
+    if (!this.stories || this.stories.length === 0) {
+      console.log('No stories available');
+      return;
+    }
+  
+    const indexToDelete = this.stories.findIndex(story => story.storyPoint === storyPointToDelete);
+  
+    if (indexToDelete !== -1) {
+      this.stories.splice(indexToDelete, 1);
+      console.log(`Story with story point ${storyPointToDelete} deleted successfully.`);
+    } else {
+      console.log(`No story found with story point ${storyPointToDelete}.`);
+    }
+  }
+  
   
   
   
