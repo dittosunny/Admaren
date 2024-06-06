@@ -11,6 +11,9 @@ import { ServiceService } from '../service.service';
 export class SprintCalculatorComponent {
   stories!: any[];
   id!: number;
+  selectedStories!:any[]
+  showSelectedStories: boolean = false;
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -40,11 +43,12 @@ export class SprintCalculatorComponent {
       const sprintPoints = this.sprintform.value.sprintpoint;
       console.log(sprintPoints);
       
-      const selectedStories = this.stories.filter(
+      this.selectedStories = this.stories.filter(
         (story) => story.storyPoint === sprintPoints
       );
 
-      console.log('Selected Stories:', selectedStories);
+      console.log('Selected Stories:', this.selectedStories);
+      this.showSelectedStories = true
     }
   }
 
